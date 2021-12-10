@@ -3,3 +3,5 @@ config.h
 dwmblocks
 sigdwmblocks/sigdwmblocks
 xgetrootname/xgetrootname
+.cache
+compile_commands.json
