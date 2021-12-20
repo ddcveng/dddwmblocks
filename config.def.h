@@ -1,8 +1,8 @@
 /* macro for conveniently specifying pathu and pathc below */
-#define PATH(name)                      "<path to the folder containing block scripts>/"name
+#define PATH(name) "<path to the folder containing block scripts>/" name
 
 /* buffer size for capturing output of the programs used for updating blocks */
-#define CMDOUTLENGTH                    50
+#define CMDOUTLENGTH 50
 
 /* DELIMITERENDCHAR must be less than 32.
  * At max, DELIMITERENDCHAR - 1 number of clickable blocks are allowed.
@@ -13,11 +13,11 @@
    defined in colors array in dwm's config.h and so on.
  * If you wish to change DELIMITERENDCHAR, don't forget to update its value in
    dwm.c and color codes in your pathu programs. */
-#define DELIMITERENDCHAR                10
+#define DELIMITERENDCHAR 10
 
 /* delimiter specified as an array of characters
  * don't remove DELIMITERENDCHAR at the end */
-static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
+static const char delimiter[] = {' ', ' ', ' ', DELIMITERENDCHAR};
 
 #include "block.h"
 
@@ -38,14 +38,11 @@ static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
  * pathc - path of the program used for handling clicks on the block */
 
 /* 1 interval = INTERVALs seconds, INTERVALn nanoseconds */
-#define INTERVALs                       1
-#define INTERVALn                       0
+#define INTERVALs 1
+#define INTERVALn 0
 
 static Block blocks[] = {
-/*      pathu                           pathc                           interval        signal */
-        { PATH("calendar.sh"),          NULL,                           30,             1},
-        { PATH("volume.sh"),            PATH("volume_button.sh"),       0,              2},
-        { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),     1,              4},
-        { PATH("battery.sh"),           PATH("battery_button.sh"),      30,             3},
-        { NULL } /* just to mark the end of the array */
+    /*      pathu                           pathc interval        signal */
+    {PATH("calendar.sh"), NULL, 30, 1},
+    {NULL} /* just to mark the end of the array */
 };
